@@ -75,10 +75,9 @@ textarea {
   border: 1px solid black;
 
   border-top-left-radius: 5%;
+  border-bottom-left-radius: 5%;
   text-align: center;
   font-size: 2rem;
-
-  border-bottom-left-radius: 5%;
 }
 
 .textBox {

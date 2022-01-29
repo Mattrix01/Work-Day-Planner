@@ -5,7 +5,7 @@ $(document).ready(function () {
   // ------- // use the id from the parent and the value from the sibling and add to local stroage
   // ------- // notify the user that it was successful for 5 seconds. add and remove element from html
   // --------------------------------------
-  //a function whichwill look at everything time-blockand check if past, present or future
+  //a function which will look at everything time-block and check if past, present or future
   // ------ // use moment to find out what the current hour is
   // ===== // for each time block we will get its id and compare with current hour
   // ----- // - if past, add past class. if present, add present class. if future, add future class.
