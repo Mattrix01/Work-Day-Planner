@@ -19,3 +19,6 @@ $(document).ready(function () {
   // ---------------------------------------------------
   //apply the current time to the 'currentDay' p element in the html using moment.
 });
+
+var today = moment();
+$("#currentDay").text(today.format("dddd, Do MMMM, YYYY kk:mm:ss"));
