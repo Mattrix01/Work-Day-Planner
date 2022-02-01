@@ -1,14 +1,22 @@
+// const initialiseLocalStorage = function (textArea) {
+//   const scheduleData =
+//     JSON.parse(localStorage.getItem("schedule")) || textItem);
+
+//   localStorage.setItem("schedule", JSON.stringify(scheduleData));
+
+//   return scheduleData;
+// };
+
 $(document).ready(function () {
   // creating a function which will be dynamically applied to all the save buttons on click
   $("button").click(function () {
-    const storedData = initialiseLocalStorage(baseArray);
+    console.log("click");
+    const storedData = initialiseLocalStorage(textItem);
     const arr = JSON.parse(localStorage.getItem("schedule"));
 
     arr[log - 9].text = textBox.value;
 
     localStorage.setItem("schedule", JSON.stringify(arr));
-
-    console.log("click");
   });
   // ------- // on click we need to get the value from the textbox 'sibling'
   var textItem = $("textarea[textInput=TextInputValue]").val();
@@ -35,3 +43,5 @@ $(document).ready(function () {
 });
 
 // Jquery review vid: https://2u-20.wistia.com/medias/g63k1z1sb3
+
+// Targetting save buttons and setting local storage
