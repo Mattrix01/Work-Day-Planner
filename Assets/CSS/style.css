@@ -83,3 +83,10 @@ textarea {
 .textBox {
   border: 1px solid black;
 }
+
+.binBtn {
+  border-left: 1px solid rgb(255, 255, 255);
+  background-color: #121111;
+  color: white;
+  margin-top: 2px;
+}

@@ -1,4 +1,5 @@
 var saveBtn = document.querySelectorAll(".saveBtn");
+var clearBtn = document.querySelectorAll(".clearBtn");
 
 var today = moment();
 $("#currentDay").text(today.format("dddd, Do MMMM, YYYY kk:mm:ss"));
@@ -33,3 +34,7 @@ for (var i = 0; i <= maximumHours; i++) {
     document.getElementById(i).children[1].value = localStorage.getItem(i);
   }
 }
+
+clearBtn[i].addEventListener("click", function () {
+  localStorage.clear();
+});
