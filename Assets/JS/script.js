@@ -1,6 +1,6 @@
 var saveBtn = document.querySelectorAll(".saveBtn");
-var clearBtn = document.querySelectorAll(".clearBtn");
-
+var clearBtn = document.querySelector(".clearBtn");
+console.log(clearBtn);
 var today = moment();
 $("#currentDay").text(today.format("dddd, Do MMMM, YYYY kk:mm:ss"));
 
@@ -9,7 +9,7 @@ var currentHour = moment().hours();
 var maximumHours = 9;
 var workHours = [9, 10, 11, 12, 13, 14, 15, 16, 17];
 
-for (var i = 0; i <= maximumHours; i++) {
+for (var i = 0; i < maximumHours; i++) {
   //present
   if (currentHour == workHours[i]) {
     document.getElementById(i).children[1].classList.add("present");
@@ -35,6 +35,9 @@ for (var i = 0; i <= maximumHours; i++) {
   }
 }
 
-clearBtn[i].addEventListener("click", function () {
-  localStorage.clear();
+clearBtn.addEventListener("click", function () {
+  for (var i = 0; i <= maximumHours; i++) {
+    localStorage.removeItem(i);
+    window.location.reload();
+  }
 });
